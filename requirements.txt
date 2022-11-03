@@ -1,0 +1,10 @@
+accelerate
+transformers>=4.21.0
+ftfy
+albumentations
+opencv-python
+einops
+tensorboard
+modelcards
+OmegaConf
+bitsandbytes==0.35.0
