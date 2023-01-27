@@ -2,3 +2,5 @@ root
 temp
 train
 images_output
+output
+__pycache__

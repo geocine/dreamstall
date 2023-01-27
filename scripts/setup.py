@@ -8,7 +8,7 @@ ROOT_DIR = os.environ.get("ROOT_DIR")
 CONFIG_DIR = os.environ.get("CONFIG_DIR")
 USER_PROFILE = os.environ.get("userprofile")
 
-huggingface_dir = os.path.join(USER_PROFILE, ".huggingface")
+huggingface_dir = os.path.join(USER_PROFILE, ".cache/huggingface")
 if not os.path.exists(huggingface_dir):
     os.makedirs(huggingface_dir)
 
@@ -17,7 +17,7 @@ hugginface_token_path = os.path.join(huggingface_dir, "token")
 if os.path.exists(token_path) and os.path.getsize(token_path) > 0:
     if not os.path.exists(hugginface_token_path) or os.path.getsize(hugginface_token_path) == 0:
         shutil.copy(token_path, os.path.join(huggingface_dir, "token"))
-        print("Copied token to .huggingface")
+        print("Copied token to .cache/huggingface")
     else:
         print("Token already exists in .huggingface")
 
